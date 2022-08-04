@@ -4,7 +4,6 @@ def vacation_type_header(func):
         func(arg, v_type, f_date, t_date)
     return wrapper
 
-
 def vacation_title(func):
     def wrapper(*args, **kwargs):
         print('CEO Red Bull Inc.')
