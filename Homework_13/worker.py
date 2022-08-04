@@ -28,9 +28,10 @@ class Worker:
         if vacation_type not in v_list:
             raise InvalidVacationTypeValueError(vacation_type)
 
-        if from_date != to_date:
-            print(f'Hi John, I need the paid {vacation_type} from {from_date} to {to_date}. {self.name} {self.surname}')
-        else:
+        if from_date == to_date:
             print(f'Hi John, I need 1 day of the paid {vacation_type} at {from_date}. {self.name} {self.surname}')
+        else:
+            print(f'Hi John, I need the paid {vacation_type} from {from_date} to {to_date}. {self.name} {self.surname}')
+
 
 
