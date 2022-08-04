@@ -20,19 +20,18 @@ class Worker:
         :param to_date: the last vacation day in type date(yyyy, mm, dd)
         :return: None
         """
+        v_list = ['vacation', 'sick leave', 'day off']
         if from_date > to_date:
             raise InvalidDatePeriod(from_date)
         if from_date < date.today():
             raise InvalidFromDate(from_date)
-
-        if from_date == to_date:
-            print(f'Hi John, I need 1 day of the paid {vacation_type} at {from_date}. {self.name} {self.surname}')
-        elif vacation_type == 'vacation':
-            print(f'Hi John, I need the paid {vacation_type} from {from_date} to {to_date}. {self.name} {self.surname}')
-        elif vacation_type == 'sick leave':
-            print(f'Hi John, I need the paid {vacation_type} from {from_date} to {to_date}. {self.name} {self.surname}')
-        elif vacation_type == 'day off':
-            print(f'Hi John,I need the paid {vacation_type} from {from_date} to {to_date}. {self.name} {self.surname}')
-        else:
+        if vacation_type not in v_list:
             raise InvalidVacationTypeValueError(vacation_type)
+
+        for elem in v_list:
+            if elem == vacation_type:
+                if from_date == to_date:
+                    print(f'Hi John, I need 1 day of the paid {vacation_type} at {from_date}. {self.name} {self.surname}')
+                print(f'Hi John, I need the paid {vacation_type} from {from_date} to {to_date}. {self.name} {self.surname}')
+
 
