@@ -13,3 +13,8 @@ class InvalidFromDate(Exception):
         self.error = error
         print('from_date can\'t be in the past')
 
+class InvalidValueRange(Exception):
+    def __init__(self, error):
+        self.error = error
+        print('Input 1, 2 or 3')
+
