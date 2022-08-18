@@ -1,7 +1,7 @@
 from datetime import date
 
 from Homework_13.decorators import vacation_title
-from Homework_13.exceptions import InvalidDatePeriod, InvalidFromDate, InvalidVacationTypeValueError, InvalidValueRange
+from Homework_13.exceptions import InvalidDatePeriod, InvalidFromDate, InvalidValueRange
 
 
 class Worker:
