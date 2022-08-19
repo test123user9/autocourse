@@ -8,7 +8,7 @@ class CoffeeMachine:
         discount = 0
 
         if credit < drink:
-            raise NotEnoughMoney
+            raise NotEnoughMoney(f'Not enough money. You need more ${str(drink - credit)}')
 
         elif credit in range(50, 100):
             discount = Discount.SILVER.value
