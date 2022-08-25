@@ -9,7 +9,7 @@ coffee_machine = CoffeeMachine()
 print('Espresso order')
 espresso = Espresso()
 espresso_with_toppings = espresso.drink_with_toppings
-money = 50
+money = 500
 print(f'Credit: ${money}')
 coffee_machine.order_drink(espresso_with_toppings, money)
 

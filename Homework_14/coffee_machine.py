@@ -23,7 +23,7 @@ class CoffeeMachine:
             discount = Discount.PLATINUM.value
 
         discounted_value = drink * discount/100
-        drink = drink - discounted_value
+        drink -= discounted_value
         print(f'You have {discount}% discount! New coffee price: ${drink}. '
               f'Your change is ${credit - drink} ')
 
