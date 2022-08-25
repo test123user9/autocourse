@@ -22,5 +22,5 @@ python test_students_number.py
 ## What have been done
 'tests' folder has been added to the 'Homework_16' folder.
 - For the first task 'test_staff_data' folder has been created with the staff instances
-- for the second and third tasks 'test_students_number.py' file has been created
+- For the second and third tasks 'test_students_number.py' file has been created
 
