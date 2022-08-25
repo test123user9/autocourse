@@ -11,21 +11,21 @@ def director():
 
 
 def test_director_name(director):
-    name = director.name
-    assert name == 'Brady', \
+    name = 'Brady'
+    assert name == director.name, \
         f'Wrong {director.position} name. \
         Should be {director.name}'
 
 
 def test_director_surname(director):
-    surname = director.surname
-    assert surname == 'Christian', \
+    surname = 'Christian'
+    assert surname == director.surname, \
         f'Wrong {director.position} surname. \
         Should be {director.surname}'
 
 def test_director_age(director):
-    age = director.age
-    assert age == 46, \
+    age = 46
+    assert age == director.age, \
         f'Wrong {director.position} age. \
         Should be {director.age}'
 

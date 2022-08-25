@@ -11,21 +11,21 @@ def teacher():
 
 
 def test_teacher_name(teacher):
-    name = teacher.name
-    assert name == 'Keanu', \
+    name = 'Keanu'
+    assert name == teacher.name, \
         f'Wrong {teacher.position} name. \
         Should be {teacher.name}'
 
 
 def test_teacher_surname(teacher):
-    surname = teacher.surname
-    assert surname == 'Zimmerman', \
+    surname = 'Zimmerman'
+    assert surname == teacher.surname, \
         f'Wrong {teacher.position} surname. \
         Should be {teacher.surname}'
 
 def test_teacher_age(teacher):
-    age = teacher.age
-    assert age == 26, \
+    age = 26
+    assert age == teacher.age, \
         f'Wrong {teacher.position} age. \
         Should be {teacher.age}'
 
