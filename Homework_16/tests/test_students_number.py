@@ -14,8 +14,8 @@ def group():
 def test_group_students_number(group):
     group.add_student(Student('Christie', 'Douglas', date(2007, 11, 13), Gender.MALE, 4))
     group.add_student(Student('Darci', 'Mejia', date(2009, 1, 3), Gender.MALE, 4))
-    group_len = 2
-    assert group_len == len(group.get_students()), \
+    group_len = len(group.get_students())
+    assert group_len == 2, \
         f'Wrong students number in the group. \
         Should be {group_len}'
 
@@ -26,8 +26,8 @@ def test_group_students_adding_removing_number(group):
     group.add_student(Student('Delores', 'Robin', date(2008, 7, 9), Gender.MALE, 4))
     group.add_student(Student('Cobie', 'Emerson', date(2007, 9, 12), Gender.MALE, 4))
     group.remove_student(Student('Christie', 'Douglas', date(2007, 11, 13), Gender.MALE, 4))
-    group_len = 4
-    assert group_len == len(group.get_students()), \
+    group_len = len(group.get_students())
+    assert group_len == 4, \
         f'Wrong students number in the group. \
         Should be {group_len}'
 

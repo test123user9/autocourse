@@ -11,21 +11,21 @@ def other_staff():
 
 
 def test_other_staff_name(other_staff):
-    name = 'Arda'
-    assert name == other_staff.name, \
+    name = other_staff.name
+    assert name == 'Arda', \
         f'Wrong {other_staff.position} name. \
         Should be {other_staff.name}'
 
 
 def test_other_staff_surname(other_staff):
-    surname = 'Donald'
-    assert surname == other_staff.surname, \
+    surname = other_staff.surname
+    assert surname == 'Donald', \
         f'Wrong {other_staff.position} surname. \
         Should be {other_staff.surname}'
 
 def test_other_staff_age(other_staff):
-    age = 52
-    assert age == other_staff.age, \
+    age = other_staff.age
+    assert age == 52, \
         f'Wrong {other_staff.position} age. \
         Should be {other_staff.age}'
 
