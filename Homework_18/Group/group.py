@@ -1,5 +1,6 @@
-from Homework_16.Human.Staff.SubStaff.student import Student
-from Homework_16.Human.Staff.SubStaff.teacher import Teacher
+from Homework_18.Human.Staff.SubStaff.student import Student
+from Homework_18.Human.Staff.SubStaff.teacher import Teacher
+from Homework_18.exceptions import TheSameStudentError
 
 
 class Group:
@@ -26,8 +27,11 @@ class Group:
     def get_students(self) -> [Student]:
         return self.__students
 
-    def add_student(self, student):
-        self.__students.append(student)
+    def add_student(self, new_student):
+        for s in self.__students:
+            if new_student == s:
+                raise TheSameStudentError('The student already added to the group')
+        self.__students.append(new_student)
 
     def remove_student(self, student):
         self.__students.remove(student)
