@@ -12,7 +12,7 @@ pip install -r requirements.txt
 Це завдання замикає усю теми PyTest, які ми взяли!
 
 ## What have been done
-Folder tests has been created and contains the following files:
+Folder 'tests' has been created and contains the following files:
 - 'conftest.py' file with fixtures 
 - 'test_education_cost.py' with tests
 
