@@ -12,8 +12,8 @@ class SchoolStaff(Staff, Human):
     def __repr__(self) -> str:
         return f'{self.__position}: {self.name} {self.surname}'
 
-    def __del__(self):
-        pass
+    # def __del__(self):
+    #     pass
 
     @property
     def reward(self) -> int:
