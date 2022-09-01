@@ -13,11 +13,11 @@ class Game(object):
 
         scores = [d.scores for d in self.dices]
 
-        if first == 0 or second == 0 or third == 0:
+        if any(i == 0 for i in scores):
             raise IncorrectZeroDiceError('Can\'t be 0')
-        elif first < 0 or second < 0 or third < 0:
+        elif any(i < 0 for i in scores):
             raise IncorrectNegativeDiceError('Can\'t be negative')
-        elif first > 6 or second > 6 or third > 6:
+        elif any(i > 6 for i in scores):
             raise IncorrectMoreThanMaxDiceError('Can\'t be more than 6')
 
         if scores.count(scores[0]) == 3:
