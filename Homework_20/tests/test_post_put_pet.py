@@ -16,8 +16,8 @@ def test_adding_new_pet(new_pet):
                                                               ('tags', [{'id': 3219, 'name': 'tag tag'}]),
                                                               ('status', 'pending')
                                                               ])
-def test_compare_pet_params_values(param_name, expected_param_value, new_pet):
-    new_pet = requests.post(PET, json=new_pet)
+def test_compare_pet_params_values(param_name, expected_param_value, new_pet, headers):
+    new_pet = requests.post(PET, json=new_pet, headers=headers)
     assert new_pet.json()[param_name] == expected_param_value, GlobalErrorMessages.WRONG_PARAM_VALUE
 
 @pytest.mark.parametrize('param_name, expected_param_value', [('id', 1239),
@@ -27,8 +27,8 @@ def test_compare_pet_params_values(param_name, expected_param_value, new_pet):
                                                               ('tags', [{'id': 3219, 'name': 'updated tag'}]),
                                                               ('status', 'sold')
                                                               ])
-def test_updating_pet(new_pet, updated_pet, param_name, expected_param_value):
-    new_pet = requests.post(PET, json=new_pet)
+def test_updating_pet(new_pet, updated_pet, param_name, expected_param_value, headers):
+    new_pet = requests.post(PET, json=new_pet, headers=headers)
     assert new_pet.json()['id'] == 1239, GlobalErrorMessages.WRONG_PARAM_VALUE
     updated_pet = requests.put(PET, json=updated_pet)
     assert updated_pet.status_code == 200, GlobalErrorMessages.WRONG_STATUS_CODE.value
