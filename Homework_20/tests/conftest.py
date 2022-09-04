@@ -4,8 +4,8 @@ import requests
 from Homework_20.configuration import PET
 
 
-@pytest.fixture
-def headers(scope="session"):
+@pytest.fixture(scope="session")
+def headers():
     headers = {
         'accept': 'application/json',
         'Content-Type': 'application/json'
